@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://my.vml.com/">
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continue to my.vml.com</title>
+
+  <!-- ============================================================
+       AUTO-REDIRECT (DISABLED)
+       Uncomment the two lines below to re-enable automatic redirect
+       ============================================================ -->
+  <!-- <meta http-equiv="refresh" content="0; url=https://my.vml.com/"> -->
   <link rel="canonical" href="https://my.vml.com/">
-  <script>
-    window.location.replace("https://my.vml.com/");
-  </script>
+
+  <!-- ============================================================
+       STYLES
+       ============================================================ -->
   <style>
+    :root {
+      --accent-color: #D9784E;
+      --accent-color-hover: #c76a41;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -19,10 +35,49 @@
       background: #f5f5f5;
       color: #333;
     }
-    a { color: #0066cc; }
+
+    /* --- CTA Button --- */
+    .cta-button {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: var(--accent-color);
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 12px 24px -6px rgba(217, 120, 78, 0.6);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent-color-hover);
+      box-shadow: 0 16px 28px -6px rgba(217, 120, 78, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .cta-button:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 16px -6px rgba(217, 120, 78, 0.6);
+    }
   </style>
 </head>
 <body>
-  <p>Redirecting to <a href="https://my.vml.com/">my.vml.com</a>…</p>
+
+  <!-- ============================================================
+       AUTO-REDIRECT SCRIPT (DISABLED)
+       Uncomment the block below to re-enable JS-based redirect
+       ============================================================ -->
+  <!--
+  <script>
+    window.location.replace("https://my.vml.com/");
+  </script>
+  -->
+
+  <!-- ============================================================
+       PAGE CONTENT / CTA BUTTON
+       ============================================================ -->
+  <a href="https://my.vml.com/" class="cta-button">Continue to my.vml.com</a>
+
 </body>
 </html>
